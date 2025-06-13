@@ -5,6 +5,10 @@ from lettings.models import Letting, Address
 
 
 def replace_models(apps, schema_editor):
+    """
+     Migrate the Addresses and Lettings objects of the oc_lettings_site into similar objects
+     belonging to the lettings app.
+    """
     old_letting_model = apps.get_model("oc_lettings_site", "Letting")
 
     for old_letting in old_letting_model.objects.all():
@@ -17,6 +21,10 @@ def replace_models(apps, schema_editor):
 
 
 class Migration(migrations.Migration):
+    """
+    Migrate database's objects created using the oc_lettings_site's models
+    into objects based on the lettings models
+    """
     dependencies = [
         ('lettings', '0001_initial'),
     ]

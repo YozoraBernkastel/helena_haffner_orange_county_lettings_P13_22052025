@@ -8,9 +8,9 @@ from lettings.models import Letting
 # Cras eget scelerisque
 def lettings_index(request):
     """
-    The home of the letting part of the site.
+    The home of the letting application with a list of all the lettings in an HTML page.
     :param request: The user's request
-    :return: The render of the lettings/index.html with all the Letting's object from the database.
+    :return: The render of the lettings/index.html with all the Letting's objects from the database.
     """
     lettings_list = Letting.objects.all()
     context = {'lettings_list': lettings_list}
@@ -29,7 +29,7 @@ def lettings_index(request):
 # Integer vehicula tincidunt enim, ac lacinia augue pulvinar sit amet.
 def letting(request, letting_id):
     """
-
+    Return an HTML page with the title and the detailed address  of a requested letting.
     :param request: the user's request
     :param letting_id: The id of the letting the user wants to consult.
     :return: The render of the HTML page with the letting's information.

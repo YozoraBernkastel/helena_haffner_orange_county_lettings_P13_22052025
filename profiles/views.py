@@ -7,6 +7,11 @@ from profiles.models import Profile
 # libero pulvinar eget. Fusc# faucibus, urna quis auctor pharetra, massa dolor cursus
 # neque, quis dictum lacus d
 def profiles_index(request):
+    """
+    Display the home of the profile application with a list of all the profiles in an HTML page.
+    :param request: The user's request
+    :return: The render of the profiles/index.html with all the Profile's objects from the database.
+    """
     profiles_list = Profile.objects.all()
     context = {'profiles_list': profiles_list}
     return render(request, 'profiles/index.html', context)
@@ -17,6 +22,12 @@ def profiles_index(request):
 # dolor id facilisis fringilla, eros leo tristique lacus,# it.
 # Nam aliquam dignissim congue. Pellentesque habitant morbi tristique senectus et netus et males
 def profile(request, username):
+    """
+    Display an HTML page with the detail of the requested profile.
+    :param request: The user's request.
+    :param username: username of the selected profile.
+    :return: The render of the detailed profile of the requested profile.
+    """
     profile = Profile.objects.get(user__username=username)
     context = {'profile': profile}
     return render(request, 'profiles/profile.html', context)

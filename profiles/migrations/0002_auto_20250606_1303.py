@@ -5,6 +5,10 @@ from profiles.models import Profile, User
 
 
 def replace_profile(apps, schema_editor):
+    """
+         Migrate the Profiles' objects of the oc_lettings_site into similar objects
+         belonging to the profiles app.
+        """
     old_profiles_model = apps.get_model("oc_lettings_site", "Profile")
 
     for old_profile in old_profiles_model.objects.all():
@@ -14,6 +18,10 @@ def replace_profile(apps, schema_editor):
 
 
 class Migration(migrations.Migration):
+    """
+        Migrate database's objects created using the oc_lettings_site's models
+        into objects based on the lettings models
+        """
     dependencies = [
         ('profiles', '0001_initial'),
     ]
