@@ -10,7 +10,8 @@ def profiles_index(request):
     """
     Display the home of the profile application with a list of all the profiles in an HTML page.
     :param request: The user's request
-    :return: The render of the profiles/index.html with all the Profile's objects from the database.
+    :return: The render of the profiles/index.html with all the Profile's objects
+    from the database.
     """
     profiles_list = Profile.objects.all()
     context = {'profiles_list': profiles_list}

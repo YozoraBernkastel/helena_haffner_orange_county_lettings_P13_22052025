@@ -10,7 +10,8 @@ def lettings_index(request):
     """
     The home of the letting application with a list of all the lettings in an HTML page.
     :param request: The user's request
-    :return: The render of the lettings/index.html with all the Letting's objects from the database.
+    :return: The render of the lettings/index.html with all the Letting's
+    objects from the database.
     """
     lettings_list = Letting.objects.all()
     context = {'lettings_list': lettings_list}
