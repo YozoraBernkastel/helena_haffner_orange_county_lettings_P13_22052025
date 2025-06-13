@@ -4,16 +4,16 @@ from django.db import migrations
 from lettings.models import Letting, Address
 
 
-# def replace_models(apps, schema_editor):
-#     old_letting_model = apps.get_model("oc_lettings_site", "Letting")
-#
-#     for old_letting in old_letting_model.objects.all():
-#         address = Address(number=old_letting.address.number, street=old_letting.address.street,
-#                           city=old_letting.address.city, state=old_letting.address.state,
-#                           zip_code=old_letting.address.zip_code, country_iso_code=old_letting.address.country_iso_code)
-#         address.save()
-#         letting = Letting(title=old_letting.title, address=address)
-#         letting.save()
+def replace_models(apps, schema_editor):
+    old_letting_model = apps.get_model("oc_lettings_site", "Letting")
+
+    for old_letting in old_letting_model.objects.all():
+        address = Address(number=old_letting.address.number, street=old_letting.address.street,
+                          city=old_letting.address.city, state=old_letting.address.state,
+                          zip_code=old_letting.address.zip_code, country_iso_code=old_letting.address.country_iso_code)
+        address.save()
+        letting = Letting(title=old_letting.title, address=address)
+        letting.save()
 
 
 class Migration(migrations.Migration):
@@ -22,5 +22,5 @@ class Migration(migrations.Migration):
     ]
 
     operations = [
-        # migrations.RunPython(replace_models)
+        migrations.RunPython(replace_models)
     ]

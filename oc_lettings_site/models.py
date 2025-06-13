@@ -3,7 +3,6 @@
 # from django.contrib.auth.models import User
 #
 #
-# # todo remove only after the database was migrate to another one !!
 # class Address(models.Model):
 #     number = models.PositiveIntegerField(validators=[MaxValueValidator(9999)])
 #     street = models.CharField(max_length=64)

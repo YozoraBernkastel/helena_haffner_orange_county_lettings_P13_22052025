@@ -3,6 +3,9 @@ from django.core.validators import MaxValueValidator, MinLengthValidator
 
 
 class Address(models.Model):
+    """
+    The Address Model contain the different part of an address.
+    """
     number = models.PositiveIntegerField(validators=[MaxValueValidator(9999)])
     street = models.CharField(max_length=64)
     city = models.CharField(max_length=64)
@@ -18,6 +21,9 @@ class Address(models.Model):
 
 
 class Letting(models.Model):
+    """
+    The Letting Model brings together the needed information for the letting.
+    """
     title = models.CharField(max_length=256)
     address = models.OneToOneField(Address, on_delete=models.CASCADE)
 

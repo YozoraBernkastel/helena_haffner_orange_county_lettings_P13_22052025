@@ -8,4 +8,9 @@ from django.shortcuts import render
 # Aliquam vitae erat ac orci placerat luctus. Nullam elementum urna nisi, pellentesque
 # iaculis enim cursus in. Praesent volutpat porttitor magna, non finibus neque cursus id.
 def index(request):
+    """
+    The home of the oc lettings site.
+    :param request: The user request
+    :return: The render corresponding to the request
+    """
     return render(request, 'index.html')
