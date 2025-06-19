@@ -35,9 +35,10 @@ def letting(request, letting_id):
     :param letting_id: The id of the letting the user wants to consult.
     :return: The render of the HTML page with the letting's information.
     """
-    letting = Letting.objects.get(id=letting_id)
+    letting = Letting.objects.filter(id=letting_id).first()
     context = {
         'title': letting.title,
         'address': letting.address,
-    }
+    } if letting is not None \
+        else {"unknown": "Aucune location ne correspond à votre recherche."}
     return render(request, 'lettings/letting.html', context)

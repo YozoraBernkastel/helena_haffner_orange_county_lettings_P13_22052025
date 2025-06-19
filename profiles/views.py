@@ -29,6 +29,8 @@ def profile(request, username):
     :param username: username of the selected profile.
     :return: The render of the detailed profile of the requested profile.
     """
-    profile = Profile.objects.get(user__username=username)
-    context = {'profile': profile}
+    profile = Profile.objects.filter(user__username=username).first()
+
+    context = {'profile': profile} if profile is not None else \
+        {"unknown": f"Aucun profil ne correspond à votre recherche \"{username}\"."}
     return render(request, 'profiles/profile.html', context)
