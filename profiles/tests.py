@@ -35,22 +35,22 @@ def init_profile() -> tuple:
     profile = create_profile()
     path = reverse("profile", kwargs={"username": profile.user.username})
 
-    return client, path
+    return client, path, profile
 
 
 @pytest.mark.django_db
 def test_profile_url():
-    client, path = init_profile()
-    assert path == "/profiles/Username/"
+    client, path, profile = init_profile()
+    assert path == f"/profiles/{profile.user.username}/"
     assert resolve(path).view_name == "profile"
 
 
 @pytest.mark.django_db
 def test_profile_view():
-    client, path = init_profile()
+    client, path, profile = init_profile()
     response = client.get(path)
     content = response.content.decode()
-    expected = "<p><strong>First name :</strong> Prénom</p>"
+    expected = f"<p><strong>First name :</strong> {profile.user.first_name}</p>"
 
     assert response.status_code == 200
     assert expected in content
