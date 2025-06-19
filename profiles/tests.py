@@ -55,3 +55,22 @@ def test_profile_view():
     assert response.status_code == 200
     assert expected in content
     assertTemplateUsed(response, "profiles/profile.html")
+
+
+@pytest.mark.django_db
+def test_unknown_profile_view():
+    client = Client()
+    other_name = "Autre"
+    profile = Profile.objects.filter(user__username=other_name).first()
+
+    assert profile is None
+
+    path = reverse("profile", kwargs={"username": other_name})
+    response = client.get(path)
+    content = response.content.decode()
+    not_expected = f"<p><strong>First name :</strong> {other_name}</p>"
+
+    assert response.status_code == 200
+    assert not_expected not in content
+    assert "Aucun profil ne correspond à votre recherche" in content
+    assertTemplateUsed(response, "profiles/profile.html")

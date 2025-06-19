@@ -54,3 +54,21 @@ def test_profile_view():
     assert response.status_code == 200
     assert expected in content
     assertTemplateUsed(response, "lettings/letting.html")
+
+
+@pytest.mark.django_db
+def test_profile_view():
+    client = Client()
+    unknown_pk = 2
+    letting = Letting.objects.filter(pk=unknown_pk).first()
+
+    assert letting is None
+
+    path = reverse("letting", kwargs={"letting_id": unknown_pk})
+    response = client.get(path)
+    content = response.content.decode()
+    expected = f"Aucune location ne correspond à votre recherche."
+
+    assert response.status_code == 200
+    assert expected in content
+    assertTemplateUsed(response, "lettings/letting.html")
