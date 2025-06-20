@@ -53,6 +53,13 @@ Dans le reste de la documentation sur le développement local, il est supposé q
 - `source venv/bin/activate`
 - `pytest`
 
+### Vérifier la couverture de tests
+
+- `cd /path/to/Python-OC-Lettings-FR`
+- `source venv/bin/activate`
+- `coverage run -m pytest`
+- `coverage html` ou `coverage report` pour avoir le détail de la couverture.
+
 #### Base de données
 
 - `cd /path/to/Python-OC-Lettings-FR`
@@ -75,3 +82,14 @@ Utilisation de PowerShell, comme ci-dessus sauf :
 
 - Pour activer l'environnement virtuel, `.\venv\Scripts\Activate.ps1` 
 - Remplacer `which <my-command>` par `(Get-Command <my-command>).Path`
+
+### Mettre en place la variable d'environnement SENTRY_KEY sur Pycharm
+
+- Ouvrez votre projet dans Pycharm.
+- Cliquez sur le bouton représentant trois points à la verticale en haut à droite à côté du bouton de Debug.
+- Sélectionnez "__Edit...__"
+- Sélectionnez la configuration permettant de lancer le serveur (correspondant à **python3 manage.py runserver**)
+- À la ligne "__Environment Variables__", cliquez sur l'icone représentant un document contenant une liste.
+- Cliquez sur le bouton __+__.
+- Dans la colonne Name, écrivez "__SENTRY_KEY__"
+- Dans la colonne Value, ajoutez la clé Sentry qui vous a été donnée.
