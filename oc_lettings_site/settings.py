@@ -1,6 +1,15 @@
 import os
-
 from pathlib import Path
+import sentry_sdk
+
+
+if os.environ.get("SENTRY_KEY"):
+    sentry_sdk.init(
+        dsn=os.environ.get("SENTRY_KEY"),
+        # Add data like request headers and IP for users,
+        # see https://docs.sentry.io/platforms/python/data-management/data-collected/ for more info
+        send_default_pii=True,
+    )
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = Path(__file__).resolve().parent.parent
