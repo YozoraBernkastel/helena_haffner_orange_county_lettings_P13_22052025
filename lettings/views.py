@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.shortcuts import get_object_or_404
 from lettings.models import Letting
 
 
@@ -35,10 +36,11 @@ def letting(request, letting_id):
     :param letting_id: The id of the letting the user wants to consult.
     :return: The render of the HTML page with the letting's information.
     """
-    letting = Letting.objects.filter(id=letting_id).first()
+    letting = get_object_or_404(Letting, id=letting_id)
+
     context = {
         'title': letting.title,
         'address': letting.address,
-    } if letting is not None \
-        else {"unknown": "Aucune location ne correspond à votre recherche."}
+    }
+
     return render(request, 'lettings/letting.html', context)

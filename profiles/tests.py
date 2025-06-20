@@ -70,7 +70,7 @@ def test_unknown_profile_view():
     content = response.content.decode()
     not_expected = f"<p><strong>First name :</strong> {other_name}</p>"
 
-    assert response.status_code == 200
+    assert response.status_code == 404
     assert not_expected not in content
-    assert "Aucun profil ne correspond à votre recherche" in content
-    assertTemplateUsed(response, "profiles/profile.html")
+    assert "<h1>Cette page n'existe pas.</h1>" in content
+    assertTemplateUsed(response, "404.html")
