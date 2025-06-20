@@ -67,8 +67,8 @@ def test_unknown_profile_view():
     path = reverse("letting", kwargs={"letting_id": unknown_pk})
     response = client.get(path)
     content = response.content.decode()
-    expected = "Aucune location ne correspond à votre recherche."
+    expected = "<h1>Cette page n'existe pas.</h1>"
 
-    assert response.status_code == 200
+    assert response.status_code == 404
     assert expected in content
-    assertTemplateUsed(response, "lettings/letting.html")
+    assertTemplateUsed(response, "404.html")

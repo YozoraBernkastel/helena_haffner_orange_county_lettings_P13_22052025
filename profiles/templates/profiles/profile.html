@@ -3,7 +3,6 @@
 
 {% block content %}
 
-{% if profile %}
 <div class="container px-5 py-5 text-center">
     <div class="row justify-content-center">
         <div class="col-lg-8">
@@ -39,15 +38,4 @@
     </div>
 </div>
 
-{% else %}
-
-<div class="container px-5 py-5 text-center">
-    <h1>{{ unknown }}</h1>
-</div>
-<div class="container px-5 py-5 text-center">
-    <a class="text-center btn fw-500 ms-lg-4 btn-primary " href="{% url 'profiles_index' %}">
-        Revenir à la page des profils.
-    </a>
-</div>
-{% endif %}
 {% endblock %}
