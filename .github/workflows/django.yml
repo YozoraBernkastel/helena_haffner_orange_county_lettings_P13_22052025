@@ -42,8 +42,8 @@ jobs:
 
       - name: Run docker
         run: |
-          docker build -t featherinefall/hha-ocr-p13:$GITHUB_SHA .          
-          docker push featherinefall/hha-ocr-p13:$COMMIT_HASH
+          docker build -t featherinefall/hha-ocr-p13:${{ github.sha }} .          
+          docker push featherinefall/hha-ocr-p13:${{ github.sha }} 
         
         
 
