@@ -46,3 +46,5 @@ jobs:
           docker push featherinefall/hha-ocr-p13:${{ github.sha }} 
           docker build -t featherinefall/hha-ocr-p13:latest .
           docker push featherinefall/hha-ocr-p13:latest
+          
+          
