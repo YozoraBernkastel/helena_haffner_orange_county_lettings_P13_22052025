@@ -40,7 +40,10 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     "lettings.apps.LettingsConfig",
     "profiles.apps.ProfilesConfig",
+    "oc_lettings_site.asgi.application"
 ]
+
+ASGI_APPLICATION = "oc_lettings_site.asgi.application"
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
