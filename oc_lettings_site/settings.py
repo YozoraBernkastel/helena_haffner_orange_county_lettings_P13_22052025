@@ -43,7 +43,7 @@ INSTALLED_APPS = [
     "oc_lettings_site.asgi.application"
 ]
 
-ASGI_APPLICATION = "oc_lettings_site.asgi.application"
+# ASGI_APPLICATION = "oc_lettings_site.asgi.application"
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
