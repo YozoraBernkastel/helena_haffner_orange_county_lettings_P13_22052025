@@ -37,7 +37,7 @@ jobs:
       - name: Run docker
         run: |
           docker build -t featherinefall/hha-ocr-p13:$GITHUB_SHA .
-          echo ${{ secrets.DOCKER_TOKEN }} | docker login -u ${{ vars.DOCKER_USERNAME }} --password-stdin
+          echo $DOCKER_TOKEN | docker login -u $DOCKER_USERNAME --password-stdin
           docker push featherinefall/hha-ocr-p13:$COMMIT_HASH
         
         
