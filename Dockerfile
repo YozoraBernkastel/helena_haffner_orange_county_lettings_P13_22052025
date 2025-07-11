@@ -1,4 +1,4 @@
-FROM python:3.12.2-slim as builder
+FROM python:3.12.2-slim
 
 ENV PYTHONUNBUFFERED=1
 WORKDIR /code
