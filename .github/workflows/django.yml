@@ -34,15 +34,10 @@ jobs:
           coverage run -m pytest
           coverage xml --fail-under=80
 
-      - name: Login to Docker Hub
-        uses: docker/login-action@v3
-        with:
-          username: ${{ vars.DOCKER_USERNAME }}
-          password: ${{ secrets.DOCKER_TOKEN }}
-
       - name: Run docker
         run: |
-          docker build -t featherinefall/hha-ocr-p13:$GITHUB_SHA .          
+          docker build -t featherinefall/hha-ocr-p13:$GITHUB_SHA .
+          echo ${{ secrets.DOCKER_TOKEN }} | docker login -u ${{ vars.DOCKER_USERNAME }} --password-stdin
           docker push featherinefall/hha-ocr-p13:$COMMIT_HASH
         
         
