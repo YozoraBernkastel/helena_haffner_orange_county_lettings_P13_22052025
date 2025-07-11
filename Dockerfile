@@ -7,4 +7,4 @@ COPY . /code
 RUN pip install -r requirements.txt
 
 EXPOSE 8000
-CMD ["daphne", "c_lettings_site.asgi:application"]
+CMD ["daphne", "oc_lettings_site.asgi:application"]
