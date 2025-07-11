@@ -25,7 +25,7 @@ SECRET_KEY = 'fp$9^593hsriajg$_%=5trot9g!1qa@ew(o-1#@=&4%=hp46(s'
 DEBUG = os.environ.get("DEBUG_MODE") if os.environ.get("DEBUG_MODE") else False
 
 
-ALLOWED_HOSTS = [] if DEBUG or not os.environ.get("ALLOWED_HOSTS") else os.environ.get("ALLOWED_HOSTS")
+ALLOWED_HOSTS = [os.environ.get("ALLOWED_HOSTS")] if os.environ.get("ALLOWED_HOSTS") else []
 
 
 # Application definition
