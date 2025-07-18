@@ -48,4 +48,4 @@ jobs:
           docker build -t featherinefall/hha-ocr-p13:latest .
           docker push featherinefall/hha-ocr-p13:latest
       - name: deploy
-        run: curl https://api:render:com/deploy/srv-d1oggqs9c44c73fjp9fg?key=T7iwnRWgtPU
+        run: curl ${{ secrets.RENDER_URL }}
