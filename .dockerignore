@@ -1,0 +1,10 @@
+.coverage
+.coverage.*
+.coveragerc
+.env
+*/tests.py
+.flake8
+setup.cfg
+/save
+.github
+.gitignore

@@ -1,0 +1,11 @@
+services:
+  ocr_p13:
+    image: ocr-p13
+    container_name: ocr-p13
+  web:
+    build: .
+    command: python3 manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .:/code
+    ports:
+      - "8000:8000"
