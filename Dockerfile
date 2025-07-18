@@ -5,8 +5,7 @@ WORKDIR /code
 
 COPY . /code
 RUN pip install -r requirements.txt
-
-CMD ["python3", "manage.py", "collectstatic"]
+ENTRYPOINT ["/code/entrypoint.sh"]
 
 EXPOSE 8000
 CMD ["daphne", "-b", "0.0.0.0", "-p", "8000", "oc_lettings_site.asgi:application"]
