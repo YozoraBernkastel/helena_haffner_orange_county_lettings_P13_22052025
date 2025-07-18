@@ -37,10 +37,10 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
+    'daphne',
     'django.contrib.staticfiles',
     "lettings.apps.LettingsConfig",
     "profiles.apps.ProfilesConfig",
-    "daphne",
 ]
 
 ASGI_APPLICATION = "oc_lettings_site.asgi.application"
