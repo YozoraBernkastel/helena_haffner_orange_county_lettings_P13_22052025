@@ -31,6 +31,8 @@ jobs:
           flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
           flake8 . --count --exit-zero --max-complexity=10 --max-line-length=99 --statistics
       - name: Run Tests
+        env:
+          SECRET_KEY: ${{ secrets.SECRET_KEY }}
         run: |
           coverage run -m pytest
           coverage xml --fail-under=80
