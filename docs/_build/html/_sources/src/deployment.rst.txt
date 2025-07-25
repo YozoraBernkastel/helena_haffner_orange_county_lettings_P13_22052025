@@ -1,10 +1,11 @@
-helena_haffner_orange_county_lettings_P13_22052025
-==================================================
-
-===========
 Déploiement
 ===========
-Un pipeline CICD est mise en place via le fichier .github/workflows/django.yml.
+
+==============
+Pipeline CI/CD
+==============
+
+Un pipeline CI/CD est mise en place via le fichier .github/workflows/django.yml.
 Ce fichier permet, à chaque push et pullrequest, de lancer les tests unitaires,
 fonctionnels et d'intégrations afin de s'assurer que le site fonctionne correctement
 et qu'au moins 80% du code est couvert.
