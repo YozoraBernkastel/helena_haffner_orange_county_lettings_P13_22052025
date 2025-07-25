@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+
+<html lang="fr" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>profiles package &#8212; Documentation Orange County Lettings 1.0.1</title>
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../_static/scrolls.css?v=6d7452d6" />
+    <link rel="stylesheet" href="_static/print.css" type="text/css" />
+    
+    <script src="../_static/documentation_options.js?v=a1a25f23"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/translations.js?v=e6b791cb"></script>
+    <script src="../_static/theme_extras.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Recherche" href="../search.html" />
+    <link rel="next" title="profiles.migrations package" href="profiles.migrations.html" />
+    <link rel="prev" title="oc_lettings_site.migrations package" href="oc_lettings_site.migrations.html" /> 
+  </head><body>
+    <div id="content">
+      <div class="header">
+        <h1 class="heading"><a href="../index.html"
+          title="back to the documentation overview"><span>profiles package</span></a></h1>
+      </div>
+      <div class="relnav" role="navigation" aria-label="Related">
+        <a href="oc_lettings_site.migrations.html">&laquo; oc_lettings_site.migrations package</a> |
+        <a href="#">profiles package</a>
+        | <a href="profiles.migrations.html">profiles.migrations package &raquo;</a>
+      </div>
+      <div id="contentwrapper">
+        <div id="toc" role="navigation" aria-label="Table of contents">
+          <h3>Table des matières</h3>
+          <ul>
+<li><a class="reference internal" href="#">profiles package</a><ul>
+<li><a class="reference internal" href="#subpackages">Subpackages</a></li>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-profiles.admin">profiles.admin module</a></li>
+<li><a class="reference internal" href="#module-profiles.apps">profiles.apps module</a><ul>
+<li><a class="reference internal" href="#profiles.apps.ProfilesConfig"><code class="docutils literal notranslate"><span class="pre">ProfilesConfig</span></code></a><ul>
+<li><a class="reference internal" href="#profiles.apps.ProfilesConfig.default_auto_field"><code class="docutils literal notranslate"><span class="pre">ProfilesConfig.default_auto_field</span></code></a></li>
+<li><a class="reference internal" href="#profiles.apps.ProfilesConfig.name"><code class="docutils literal notranslate"><span class="pre">ProfilesConfig.name</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-profiles.models">profiles.models module</a><ul>
+<li><a class="reference internal" href="#profiles.models.Profile"><code class="docutils literal notranslate"><span class="pre">Profile</span></code></a><ul>
+<li><a class="reference internal" href="#profiles.models.Profile.DoesNotExist"><code class="docutils literal notranslate"><span class="pre">Profile.DoesNotExist</span></code></a></li>
+<li><a class="reference internal" href="#profiles.models.Profile.MultipleObjectsReturned"><code class="docutils literal notranslate"><span class="pre">Profile.MultipleObjectsReturned</span></code></a></li>
+<li><a class="reference internal" href="#profiles.models.Profile.favorite_city"><code class="docutils literal notranslate"><span class="pre">Profile.favorite_city</span></code></a></li>
+<li><a class="reference internal" href="#profiles.models.Profile.id"><code class="docutils literal notranslate"><span class="pre">Profile.id</span></code></a></li>
+<li><a class="reference internal" href="#profiles.models.Profile.objects"><code class="docutils literal notranslate"><span class="pre">Profile.objects</span></code></a></li>
+<li><a class="reference internal" href="#profiles.models.Profile.user"><code class="docutils literal notranslate"><span class="pre">Profile.user</span></code></a></li>
+<li><a class="reference internal" href="#profiles.models.Profile.user_id"><code class="docutils literal notranslate"><span class="pre">Profile.user_id</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-profiles.tests">profiles.tests module</a><ul>
+<li><a class="reference internal" href="#profiles.tests.create_profile"><code class="docutils literal notranslate"><span class="pre">create_profile()</span></code></a></li>
+<li><a class="reference internal" href="#profiles.tests.init_profile"><code class="docutils literal notranslate"><span class="pre">init_profile()</span></code></a></li>
+<li><a class="reference internal" href="#profiles.tests.test_profile_index_url"><code class="docutils literal notranslate"><span class="pre">test_profile_index_url()</span></code></a></li>
+<li><a class="reference internal" href="#profiles.tests.test_profile_index_view"><code class="docutils literal notranslate"><span class="pre">test_profile_index_view()</span></code></a></li>
+<li><a class="reference internal" href="#profiles.tests.test_profile_url"><code class="docutils literal notranslate"><span class="pre">test_profile_url()</span></code></a></li>
+<li><a class="reference internal" href="#profiles.tests.test_profile_view"><code class="docutils literal notranslate"><span class="pre">test_profile_view()</span></code></a></li>
+<li><a class="reference internal" href="#profiles.tests.test_unknown_profile_view"><code class="docutils literal notranslate"><span class="pre">test_unknown_profile_view()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-profiles.urls">profiles.urls module</a></li>
+<li><a class="reference internal" href="#module-profiles.views">profiles.views module</a><ul>
+<li><a class="reference internal" href="#profiles.views.profile"><code class="docutils literal notranslate"><span class="pre">profile()</span></code></a></li>
+<li><a class="reference internal" href="#profiles.views.profiles_index"><code class="docutils literal notranslate"><span class="pre">profiles_index()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-profiles">Module contents</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <div role="main">
+        
+  <section id="profiles-package">
+<h1>profiles package<a class="headerlink" href="#profiles-package" title="Lien vers cette rubrique">¶</a></h1>
+<section id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Lien vers cette rubrique">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="profiles.migrations.html">profiles.migrations package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="profiles.migrations.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="profiles.migrations.html#module-profiles.migrations.0001_initial">profiles.migrations.0001_initial module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="profiles.migrations.html#profiles.migrations.0001_initial.Migration"><code class="docutils literal notranslate"><span class="pre">Migration</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="profiles.migrations.html#profiles.migrations.0001_initial.Migration.dependencies"><code class="docutils literal notranslate"><span class="pre">Migration.dependencies</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="profiles.migrations.html#profiles.migrations.0001_initial.Migration.initial"><code class="docutils literal notranslate"><span class="pre">Migration.initial</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="profiles.migrations.html#profiles.migrations.0001_initial.Migration.operations"><code class="docutils literal notranslate"><span class="pre">Migration.operations</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="profiles.migrations.html#module-profiles.migrations.0002_auto_20250606_1303">profiles.migrations.0002_auto_20250606_1303 module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="profiles.migrations.html#profiles.migrations.0002_auto_20250606_1303.Migration"><code class="docutils literal notranslate"><span class="pre">Migration</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="profiles.migrations.html#profiles.migrations.0002_auto_20250606_1303.Migration.dependencies"><code class="docutils literal notranslate"><span class="pre">Migration.dependencies</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="profiles.migrations.html#profiles.migrations.0002_auto_20250606_1303.Migration.operations"><code class="docutils literal notranslate"><span class="pre">Migration.operations</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="profiles.migrations.html#profiles.migrations.0002_auto_20250606_1303.replace_profile"><code class="docutils literal notranslate"><span class="pre">replace_profile()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="profiles.migrations.html#module-profiles.migrations.0003_alter_profile_user">profiles.migrations.0003_alter_profile_user module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="profiles.migrations.html#profiles.migrations.0003_alter_profile_user.Migration"><code class="docutils literal notranslate"><span class="pre">Migration</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="profiles.migrations.html#profiles.migrations.0003_alter_profile_user.Migration.dependencies"><code class="docutils literal notranslate"><span class="pre">Migration.dependencies</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="profiles.migrations.html#profiles.migrations.0003_alter_profile_user.Migration.operations"><code class="docutils literal notranslate"><span class="pre">Migration.operations</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="profiles.migrations.html#module-profiles.migrations">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Lien vers cette rubrique">¶</a></h2>
+</section>
+<section id="module-profiles.admin">
+<span id="profiles-admin-module"></span><h2>profiles.admin module<a class="headerlink" href="#module-profiles.admin" title="Lien vers cette rubrique">¶</a></h2>
+</section>
+<section id="module-profiles.apps">
+<span id="profiles-apps-module"></span><h2>profiles.apps module<a class="headerlink" href="#module-profiles.apps" title="Lien vers cette rubrique">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="profiles.apps.ProfilesConfig">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">profiles.apps.</span></span><span class="sig-name descname"><span class="pre">ProfilesConfig</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">app_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">app_module</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/profiles/apps.html#ProfilesConfig"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#profiles.apps.ProfilesConfig" title="Lien vers cette définition">¶</a></dt>
+<dd><p>Bases : <code class="xref py py-class docutils literal notranslate"><span class="pre">AppConfig</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="profiles.apps.ProfilesConfig.default_auto_field">
+<span class="sig-name descname"><span class="pre">default_auto_field</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'django.db.models.BigAutoField'</span></em><a class="headerlink" href="#profiles.apps.ProfilesConfig.default_auto_field" title="Lien vers cette définition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="profiles.apps.ProfilesConfig.name">
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'profiles'</span></em><a class="headerlink" href="#profiles.apps.ProfilesConfig.name" title="Lien vers cette définition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-profiles.models">
+<span id="profiles-models-module"></span><h2>profiles.models module<a class="headerlink" href="#module-profiles.models" title="Lien vers cette rubrique">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="profiles.models.Profile">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">profiles.models.</span></span><span class="sig-name descname"><span class="pre">Profile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/profiles/models.html#Profile"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#profiles.models.Profile" title="Lien vers cette définition">¶</a></dt>
+<dd><p>Bases : <code class="xref py py-class docutils literal notranslate"><span class="pre">Model</span></code></p>
+<p>The Profile Model is used to complete the User Model with additional info which cannot be
+placed in the User Model.</p>
+<dl class="py exception">
+<dt class="sig sig-object py" id="profiles.models.Profile.DoesNotExist">
+<em class="property"><span class="k"><span class="pre">exception</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">DoesNotExist</span></span><a class="headerlink" href="#profiles.models.Profile.DoesNotExist" title="Lien vers cette définition">¶</a></dt>
+<dd><p>Bases : <code class="xref py py-class docutils literal notranslate"><span class="pre">ObjectDoesNotExist</span></code></p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="profiles.models.Profile.MultipleObjectsReturned">
+<em class="property"><span class="k"><span class="pre">exception</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MultipleObjectsReturned</span></span><a class="headerlink" href="#profiles.models.Profile.MultipleObjectsReturned" title="Lien vers cette définition">¶</a></dt>
+<dd><p>Bases : <code class="xref py py-class docutils literal notranslate"><span class="pre">MultipleObjectsReturned</span></code></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="profiles.models.Profile.favorite_city">
+<span class="sig-name descname"><span class="pre">favorite_city</span></span><a class="headerlink" href="#profiles.models.Profile.favorite_city" title="Lien vers cette définition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="profiles.models.Profile.id">
+<span class="sig-name descname"><span class="pre">id</span></span><a class="headerlink" href="#profiles.models.Profile.id" title="Lien vers cette définition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="profiles.models.Profile.objects">
+<span class="sig-name descname"><span class="pre">objects</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;django.db.models.manager.Manager</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#profiles.models.Profile.objects" title="Lien vers cette définition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="profiles.models.Profile.user">
+<span class="sig-name descname"><span class="pre">user</span></span><a class="headerlink" href="#profiles.models.Profile.user" title="Lien vers cette définition">¶</a></dt>
+<dd><p>Accessor to the related object on the forward side of a one-to-one relation.</p>
+<p>In the example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">Restaurant</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">place</span> <span class="o">=</span> <span class="n">OneToOneField</span><span class="p">(</span><span class="n">Place</span><span class="p">,</span> <span class="n">related_name</span><span class="o">=</span><span class="s1">&#39;restaurant&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">Restaurant.place</span></code> is a <code class="docutils literal notranslate"><span class="pre">ForwardOneToOneDescriptor</span></code> instance.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="profiles.models.Profile.user_id">
+<span class="sig-name descname"><span class="pre">user_id</span></span><a class="headerlink" href="#profiles.models.Profile.user_id" title="Lien vers cette définition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-profiles.tests">
+<span id="profiles-tests-module"></span><h2>profiles.tests module<a class="headerlink" href="#module-profiles.tests" title="Lien vers cette rubrique">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="profiles.tests.create_profile">
+<span class="sig-prename descclassname"><span class="pre">profiles.tests.</span></span><span class="sig-name descname"><span class="pre">create_profile</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#profiles.models.Profile" title="profiles.models.Profile"><span class="pre">Profile</span></a></span></span><a class="reference internal" href="../_modules/profiles/tests.html#create_profile"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#profiles.tests.create_profile" title="Lien vers cette définition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="profiles.tests.init_profile">
+<span class="sig-prename descclassname"><span class="pre">profiles.tests.</span></span><span class="sig-name descname"><span class="pre">init_profile</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span></span></span><a class="reference internal" href="../_modules/profiles/tests.html#init_profile"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#profiles.tests.init_profile" title="Lien vers cette définition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="profiles.tests.test_profile_index_url">
+<span class="sig-prename descclassname"><span class="pre">profiles.tests.</span></span><span class="sig-name descname"><span class="pre">test_profile_index_url</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/profiles/tests.html#test_profile_index_url"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#profiles.tests.test_profile_index_url" title="Lien vers cette définition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="profiles.tests.test_profile_index_view">
+<span class="sig-prename descclassname"><span class="pre">profiles.tests.</span></span><span class="sig-name descname"><span class="pre">test_profile_index_view</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/profiles/tests.html#test_profile_index_view"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#profiles.tests.test_profile_index_view" title="Lien vers cette définition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="profiles.tests.test_profile_url">
+<span class="sig-prename descclassname"><span class="pre">profiles.tests.</span></span><span class="sig-name descname"><span class="pre">test_profile_url</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/profiles/tests.html#test_profile_url"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#profiles.tests.test_profile_url" title="Lien vers cette définition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="profiles.tests.test_profile_view">
+<span class="sig-prename descclassname"><span class="pre">profiles.tests.</span></span><span class="sig-name descname"><span class="pre">test_profile_view</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/profiles/tests.html#test_profile_view"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#profiles.tests.test_profile_view" title="Lien vers cette définition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="profiles.tests.test_unknown_profile_view">
+<span class="sig-prename descclassname"><span class="pre">profiles.tests.</span></span><span class="sig-name descname"><span class="pre">test_unknown_profile_view</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/profiles/tests.html#test_unknown_profile_view"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#profiles.tests.test_unknown_profile_view" title="Lien vers cette définition">¶</a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-profiles.urls">
+<span id="profiles-urls-module"></span><h2>profiles.urls module<a class="headerlink" href="#module-profiles.urls" title="Lien vers cette rubrique">¶</a></h2>
+</section>
+<section id="module-profiles.views">
+<span id="profiles-views-module"></span><h2>profiles.views module<a class="headerlink" href="#module-profiles.views" title="Lien vers cette rubrique">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="profiles.views.profile">
+<span class="sig-prename descclassname"><span class="pre">profiles.views.</span></span><span class="sig-name descname"><span class="pre">profile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">username</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/profiles/views.html#profile"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#profiles.views.profile" title="Lien vers cette définition">¶</a></dt>
+<dd><p>Display an HTML page with the detail of the requested profile.
+:param request: The user’s request.
+:param username: username of the selected profile.
+:return: The render of the detailed profile of the requested profile.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="profiles.views.profiles_index">
+<span class="sig-prename descclassname"><span class="pre">profiles.views.</span></span><span class="sig-name descname"><span class="pre">profiles_index</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/profiles/views.html#profiles_index"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#profiles.views.profiles_index" title="Lien vers cette définition">¶</a></dt>
+<dd><p>Display the home of the profile application with a list of all the profiles in an HTML page.
+:param request: The user’s request
+:return: The render of the profiles/index.html with all the Profile’s objects
+from the database.</p>
+</dd></dl>
+
+</section>
+<section id="module-profiles">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-profiles" title="Lien vers cette rubrique">¶</a></h2>
+</section>
+</section>
+
+
+        </div>
+      </div>
+    </div>
+
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2025, Helena Haffner.
+      Créé en utilisant <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
+    </div>
+  </body>
+</html>

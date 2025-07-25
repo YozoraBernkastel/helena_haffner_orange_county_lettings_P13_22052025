@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+
+<html lang="fr" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>lettings.migrations package &#8212; Documentation Orange County Lettings 1.0.1</title>
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../_static/scrolls.css?v=6d7452d6" />
+    <link rel="stylesheet" href="_static/print.css" type="text/css" />
+    
+    <script src="../_static/documentation_options.js?v=a1a25f23"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/translations.js?v=e6b791cb"></script>
+    <script src="../_static/theme_extras.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Recherche" href="../search.html" />
+    <link rel="next" title="manage module" href="manage.html" />
+    <link rel="prev" title="lettings package" href="lettings.html" /> 
+  </head><body>
+    <div id="content">
+      <div class="header">
+        <h1 class="heading"><a href="../index.html"
+          title="back to the documentation overview"><span>lettings.migrations package</span></a></h1>
+      </div>
+      <div class="relnav" role="navigation" aria-label="Related">
+        <a href="lettings.html">&laquo; lettings package</a> |
+        <a href="#">lettings.migrations package</a>
+        | <a href="manage.html">manage module &raquo;</a>
+      </div>
+      <div id="contentwrapper">
+        <div id="toc" role="navigation" aria-label="Table of contents">
+          <h3>Table des matières</h3>
+          <ul>
+<li><a class="reference internal" href="#">lettings.migrations package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-lettings.migrations.0001_initial">lettings.migrations.0001_initial module</a><ul>
+<li><a class="reference internal" href="#lettings.migrations.0001_initial.Migration"><code class="docutils literal notranslate"><span class="pre">Migration</span></code></a><ul>
+<li><a class="reference internal" href="#lettings.migrations.0001_initial.Migration.dependencies"><code class="docutils literal notranslate"><span class="pre">Migration.dependencies</span></code></a></li>
+<li><a class="reference internal" href="#lettings.migrations.0001_initial.Migration.initial"><code class="docutils literal notranslate"><span class="pre">Migration.initial</span></code></a></li>
+<li><a class="reference internal" href="#lettings.migrations.0001_initial.Migration.operations"><code class="docutils literal notranslate"><span class="pre">Migration.operations</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-lettings.migrations.0002_auto_20250606_1336">lettings.migrations.0002_auto_20250606_1336 module</a><ul>
+<li><a class="reference internal" href="#lettings.migrations.0002_auto_20250606_1336.Migration"><code class="docutils literal notranslate"><span class="pre">Migration</span></code></a><ul>
+<li><a class="reference internal" href="#lettings.migrations.0002_auto_20250606_1336.Migration.dependencies"><code class="docutils literal notranslate"><span class="pre">Migration.dependencies</span></code></a></li>
+<li><a class="reference internal" href="#lettings.migrations.0002_auto_20250606_1336.Migration.operations"><code class="docutils literal notranslate"><span class="pre">Migration.operations</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#lettings.migrations.0002_auto_20250606_1336.replace_models"><code class="docutils literal notranslate"><span class="pre">replace_models()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-lettings.migrations">Module contents</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <div role="main">
+        
+  <section id="lettings-migrations-package">
+<h1>lettings.migrations package<a class="headerlink" href="#lettings-migrations-package" title="Lien vers cette rubrique">¶</a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Lien vers cette rubrique">¶</a></h2>
+</section>
+<section id="module-lettings.migrations.0001_initial">
+<span id="lettings-migrations-0001-initial-module"></span><h2>lettings.migrations.0001_initial module<a class="headerlink" href="#module-lettings.migrations.0001_initial" title="Lien vers cette rubrique">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="lettings.migrations.0001_initial.Migration">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">lettings.migrations.0001_initial.</span></span><span class="sig-name descname"><span class="pre">Migration</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">app_label</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/lettings/migrations/0001_initial.html#Migration"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#lettings.migrations.0001_initial.Migration" title="Lien vers cette définition">¶</a></dt>
+<dd><p>Bases : <code class="xref py py-class docutils literal notranslate"><span class="pre">Migration</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lettings.migrations.0001_initial.Migration.dependencies">
+<span class="sig-name descname"><span class="pre">dependencies</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[('oc_lettings_site',</span> <span class="pre">'0001_initial')]</span></em><a class="headerlink" href="#lettings.migrations.0001_initial.Migration.dependencies" title="Lien vers cette définition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lettings.migrations.0001_initial.Migration.initial">
+<span class="sig-name descname"><span class="pre">initial</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">True</span></em><a class="headerlink" href="#lettings.migrations.0001_initial.Migration.initial" title="Lien vers cette définition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lettings.migrations.0001_initial.Migration.operations">
+<span class="sig-name descname"><span class="pre">operations</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[&lt;CreateModel</span>&#160; <span class="pre">name='Address',</span> <span class="pre">fields=[('id',</span> <span class="pre">&lt;django.db.models.fields.BigAutoField&gt;),</span> <span class="pre">('number',</span> <span class="pre">&lt;django.db.models.fields.PositiveIntegerField&gt;),</span> <span class="pre">('street',</span> <span class="pre">&lt;django.db.models.fields.CharField&gt;),</span> <span class="pre">('city',</span> <span class="pre">&lt;django.db.models.fields.CharField&gt;),</span> <span class="pre">('state',</span> <span class="pre">&lt;django.db.models.fields.CharField&gt;),</span> <span class="pre">('zip_code',</span> <span class="pre">&lt;django.db.models.fields.PositiveIntegerField&gt;),</span> <span class="pre">('country_iso_code',</span> <span class="pre">&lt;django.db.models.fields.CharField&gt;)],</span> <span class="pre">options={'verbose_name_plural':</span> <span class="pre">'Adresses'}&gt;,</span> <span class="pre">&lt;CreateModel</span>&#160; <span class="pre">name='Letting',</span> <span class="pre">fields=[('id',</span> <span class="pre">&lt;django.db.models.fields.BigAutoField&gt;),</span> <span class="pre">('title',</span> <span class="pre">&lt;django.db.models.fields.CharField&gt;),</span> <span class="pre">('address',</span> <span class="pre">&lt;django.db.models.fields.related.OneToOneField&gt;)]&gt;]</span></em><a class="headerlink" href="#lettings.migrations.0001_initial.Migration.operations" title="Lien vers cette définition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-lettings.migrations.0002_auto_20250606_1336">
+<span id="lettings-migrations-0002-auto-20250606-1336-module"></span><h2>lettings.migrations.0002_auto_20250606_1336 module<a class="headerlink" href="#module-lettings.migrations.0002_auto_20250606_1336" title="Lien vers cette rubrique">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="lettings.migrations.0002_auto_20250606_1336.Migration">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">lettings.migrations.0002_auto_20250606_1336.</span></span><span class="sig-name descname"><span class="pre">Migration</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">app_label</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/lettings/migrations/0002_auto_20250606_1336.html#Migration"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#lettings.migrations.0002_auto_20250606_1336.Migration" title="Lien vers cette définition">¶</a></dt>
+<dd><p>Bases : <code class="xref py py-class docutils literal notranslate"><span class="pre">Migration</span></code></p>
+<p>Migrate database’s objects created using the oc_lettings_site’s models
+into objects based on the lettings models</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lettings.migrations.0002_auto_20250606_1336.Migration.dependencies">
+<span class="sig-name descname"><span class="pre">dependencies</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[('lettings',</span> <span class="pre">'0001_initial')]</span></em><a class="headerlink" href="#lettings.migrations.0002_auto_20250606_1336.Migration.dependencies" title="Lien vers cette définition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lettings.migrations.0002_auto_20250606_1336.Migration.operations">
+<span class="sig-name descname"><span class="pre">operations</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[&lt;RunPython</span> <span class="pre">&lt;function</span> <span class="pre">replace_models&gt;&gt;]</span></em><a class="headerlink" href="#lettings.migrations.0002_auto_20250606_1336.Migration.operations" title="Lien vers cette définition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="lettings.migrations.0002_auto_20250606_1336.replace_models">
+<span class="sig-prename descclassname"><span class="pre">lettings.migrations.0002_auto_20250606_1336.</span></span><span class="sig-name descname"><span class="pre">replace_models</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">apps</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">schema_editor</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/lettings/migrations/0002_auto_20250606_1336.html#replace_models"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#lettings.migrations.0002_auto_20250606_1336.replace_models" title="Lien vers cette définition">¶</a></dt>
+<dd><p>Migrate the Addresses and Lettings objects of the oc_lettings_site into similar objects
+belonging to the lettings app.</p>
+</dd></dl>
+
+</section>
+<section id="module-lettings.migrations">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-lettings.migrations" title="Lien vers cette rubrique">¶</a></h2>
+</section>
+</section>
+
+
+        </div>
+      </div>
+    </div>
+
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2025, Helena Haffner.
+      Créé en utilisant <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
+    </div>
+  </body>
+</html>

@@ -15,6 +15,7 @@ coverage = "^7.9.1"
 sentry-sdk = {extras = ["django"], version = "^2.30.0"}
 daphne = "^4.2.1"
 whitenoise = "^6.9.0"
+sphinxcontrib-django = "^2.5"
 
 
 [build-system]
