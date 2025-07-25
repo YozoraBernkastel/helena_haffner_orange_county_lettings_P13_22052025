@@ -7,10 +7,12 @@ Orange County Lettings documentation
 ====================================
 
 Index
-~~~~
+~~~~~
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
 
+   src/project_description
+   src/deployment
    src/modules
 

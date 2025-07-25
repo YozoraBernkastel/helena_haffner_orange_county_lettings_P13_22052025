@@ -7,11 +7,6 @@ helena_haffner_orange_county_lettings_P13_22052025
 
 OC Lettings Sites
 ~~~~
-.. automodule:: oc_lettings_site.urls
-   :members:
-   :show-inheritance:
-   :undoc-members:
-
 .. automodule:: oc_lettings_site.views
    :members:
    :undoc-members:
@@ -19,11 +14,6 @@ OC Lettings Sites
 
 Lettings
 ~~~~
-.. automodule:: lettings.urls
-   :members:
-   :show-inheritance:
-   :undoc-members:
-
 .. automodule:: lettings.models
    :members:
    :undoc-members:
@@ -36,11 +26,6 @@ Lettings
 
 Profiles
 ~~~~
-.. automodule:: profiles.urls
-   :members:
-   :show-inheritance:
-   :undoc-members:
-
 .. automodule:: profiles.models
    :members:
    :undoc-members:

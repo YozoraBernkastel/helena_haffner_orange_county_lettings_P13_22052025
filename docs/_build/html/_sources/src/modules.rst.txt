@@ -5,8 +5,34 @@ helena_haffner_orange_county_lettings_P13_22052025
 .. toctree::
    :maxdepth: 4
 
-   lettings
-   manage
-   oc_lettings_site
-   profiles
+OC Lettings Sites
+~~~~
+.. automodule:: oc_lettings_site.views
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Lettings
+~~~~
+.. automodule:: lettings.models
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+.. automodule:: lettings.views
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Profiles
+~~~~
+.. automodule:: profiles.models
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+.. automodule:: profiles.views
+   :members:
+   :undoc-members:
+   :show-inheritance:
 

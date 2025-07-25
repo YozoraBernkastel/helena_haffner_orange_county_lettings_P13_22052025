@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+
+<html lang="fr" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>helena_haffner_orange_county_lettings_P13_22052025 &#8212; Documentation Orange County Lettings 1.0.1</title>
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../_static/scrolls.css?v=6d7452d6" />
+    <link rel="stylesheet" href="_static/print.css" type="text/css" />
+    
+    <script src="../_static/documentation_options.js?v=a1a25f23"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/translations.js?v=e6b791cb"></script>
+    <script src="../_static/theme_extras.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Recherche" href="../search.html" />
+    <link rel="next" title="helena_haffner_orange_county_lettings_P13_22052025" href="modules.html" />
+    <link rel="prev" title="helena_haffner_orange_county_lettings_P13_22052025" href="project_description.html" /> 
+  </head><body>
+    <div id="content">
+      <div class="header">
+        <h1 class="heading"><a href="../index.html"
+          title="back to the documentation overview"><span>helena_haffner_orange_county_lettings_P13_22052025</span></a></h1>
+      </div>
+      <div class="relnav" role="navigation" aria-label="Related">
+        <a href="project_description.html">&laquo; helena_haffner_orange_county_lettings_P13_22052025</a> |
+        <a href="#">helena_haffner_orange_county_lettings_P13_22052025</a>
+        | <a href="modules.html">helena_haffner_orange_county_lettings_P13_22052025 &raquo;</a>
+      </div>
+      <div id="contentwrapper">
+        <div id="toc" role="navigation" aria-label="Table of contents">
+          <h3>Table des matières</h3>
+          <ul>
+<li><a class="reference internal" href="#">helena_haffner_orange_county_lettings_P13_22052025</a><ul>
+<li><a class="reference internal" href="#deploiement">Déploiement</a></li>
+<li><a class="reference internal" href="#render">Render</a></li>
+<li><a class="reference internal" href="#les-variables-d-environnement">Les variables d’environnement</a><ul>
+<li><a class="reference internal" href="#sur-github">Sur Github:</a></li>
+<li><a class="reference internal" href="#sur-render">Sur Render</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <div role="main">
+        
+  <section id="helena-haffner-orange-county-lettings-p13-22052025">
+<h1>helena_haffner_orange_county_lettings_P13_22052025<a class="headerlink" href="#helena-haffner-orange-county-lettings-p13-22052025" title="Lien vers cette rubrique">¶</a></h1>
+<section id="deploiement">
+<h2>Déploiement<a class="headerlink" href="#deploiement" title="Lien vers cette rubrique">¶</a></h2>
+<p>Un pipeline CICD est mise en place via le fichier .github/workflows/django.yml.
+Ce fichier permet, à chaque push et pullrequest, de lancer les tests unitaires,
+fonctionnels et d’intégrations afin de s’assurer que le site fonctionne correctement
+et qu’au moins 80% du code est couvert.</p>
+<p>Si une pullrequest ou un push vers la branche master est effectué,
+le pipeline se connecte à Docker Hub pour créer deux images Docker du projet
+qui seront stockées sur Docker Hub, dans le répertoire du projet.</p>
+<p>La première image créée est une image utilisant le hash du commit.
+Ainsi, chaque commit possède son image, ce qui permet de revenir facilement
+en arrière lors d’un déploiement en cas de problèmes non détectés.</p>
+<p>La seconde image Docker, à chaque fois identique à l’image du dessus,
+est envoyée sur Docker Hub en utilisant le tag prédéfini latest et écrase
+donc l’image précédente qui possédait ce tag, ce qui permet d’avoir une
+url prédéfinie à utiliser pour toujours avoir une image avec l’image
+la plus récente du projet.</p>
+<p>Une fois l’image docker latest poussée sur Docker Hub,
+le pipeline termine par un appel curl à l’url donnée par Render
+– service cloud sur lequel est déployé le projet –
+pour lancer un déploiement avec l’image Docker la plus récente
+portant le tag latest.</p>
+</section>
+<section id="render">
+<h2>Render<a class="headerlink" href="#render" title="Lien vers cette rubrique">¶</a></h2>
+<p>Render est le service cloud sur lequel est déployé le projet Orange County Lettings.</p>
+</section>
+<section id="les-variables-d-environnement">
+<h2>Les variables d’environnement<a class="headerlink" href="#les-variables-d-environnement" title="Lien vers cette rubrique">¶</a></h2>
+<section id="sur-github">
+<h3>Sur Github:<a class="headerlink" href="#sur-github" title="Lien vers cette rubrique">¶</a></h3>
+<p>Les variables d’environnements doivent être à la fois ajoutées sur Github
+et sur Render pour le déploiement. Pour ajouter une variable d’environnement
+sur Github, allez dans les Settings du projet dans le répertoire du projet,
+puis dans Secrets and variables, puis cliquez sur Actions et enfin sur le
+bouton New repository secret.</p>
+<p>Une fois cela fait, pensez à appeler la nouvelle variable d’environnement
+dans le fichier pour la pipeline dans la rubrique env: en utlisant
+le format VAR_NAME : ${{ secrets.VAR_NAME }} – VAR_NAME étant à remplacer
+par le nom que vous avez donné à votre variable d’environnement.</p>
+</section>
+<section id="sur-render">
+<h3>Sur Render<a class="headerlink" href="#sur-render" title="Lien vers cette rubrique">¶</a></h3>
+<p>Pour ajouter une variable d’environnement sur Render, une fois sur
+la page du projet, dans le menu vertical à droite, allez dans Environment,
+cliquez sur Edit puis sur Add.</p>
+</section>
+</section>
+</section>
+
+
+        </div>
+      </div>
+    </div>
+
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2025, Helena Haffner.
+      Créé en utilisant <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
+    </div>
+  </body>
+</html>
