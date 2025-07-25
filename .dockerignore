@@ -6,6 +6,6 @@
 .flake8
 setup.cfg
 /save
-/doc
+/docs
 .github
 .gitignore
