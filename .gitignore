@@ -5,3 +5,4 @@ venv
 /save
 /.coverage
 oc_lettings_site/settings_local.py
+/staticfiles
