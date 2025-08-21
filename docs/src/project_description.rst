@@ -59,6 +59,7 @@ Mettre en place les variables d'environnement sur Pycharm
 Liste des Variables d'environnement et valeurs :
 
 - ALLOWED_HOSTS : 127.0.0.1
+- CSRF_TRUSTED : ://127.0.0.1/
 - DJANGO_SETTINGS_MODULE : path_vers_le_settings-local
 - PYTHONUNBUFFERED : 1
 - SECRET_KEY : valeur_de_la_secret_key
