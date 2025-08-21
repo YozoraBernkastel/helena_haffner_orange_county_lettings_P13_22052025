@@ -19,5 +19,6 @@ def index(request):
 def trigger_error(request):
     if request.user.is_staff:
         division_by_zero = 1 / 0
+        print(division_by_zero)
 
     return render(request, '404.html')
