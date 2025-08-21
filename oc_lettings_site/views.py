@@ -14,3 +14,10 @@ def index(request):
     :return: The render corresponding to the request
     """
     return render(request, 'index.html')
+
+
+def trigger_error(request):
+    if request.user.is_staff:
+        division_by_zero = 1 / 0
+
+    return render(request, '404.html')
